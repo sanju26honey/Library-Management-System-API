@@ -64,7 +64,7 @@ exports.createBook = async (req, res) => {
     const savedBook = await book.save();
     res.status(201).json(savedBook);
   } catch (err) {
-    res.status(400).json({ message: err.message });
+    res.status(500).json({ message: err.message });
   }
 };
 
@@ -79,7 +79,7 @@ exports.updateBook = async (req, res) => {
     if (!updatedBook) return res.status(404).json({ message: "Book not found" });
     res.json(updatedBook);
   } catch (err) {
-    res.status(400).json({ message: err.message });
+    res.status(500).json({ message: err.message });
   }
 };
 

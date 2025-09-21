@@ -16,6 +16,7 @@ if (process.env.NODE_ENV === "development") app.use(morgan("dev"));
 
 // Routes
 app.use("/api/books", require("./routes/bookRoutes"));
+app.use("/api/authors", require("./routes/authorRoutes"));
 const authRoutes = require("./routes/auth");
 app.use("/auth", authRoutes);
 
