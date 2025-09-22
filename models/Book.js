@@ -7,6 +7,7 @@ const BookSchema = new mongoose.Schema(
     category: { type: String },
     publishedYear: { type: Number },
     pages: { type: Number },
+    coverImage: { type: String }
   },
   { timestamps: true }
 );
